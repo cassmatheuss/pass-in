@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "Matheus Castilho Party",
+    "details": "A House Party!",
+    "maximumAttendees": 100
+}
+
+###
+
+POST http://localhost:3333/events/EVENT_ID_HERE/attendees
+Content-Type: application/json
+
+{
+    "name": "Matheus Castilho",
+    "email": "cassmatheuss@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/EVENT_ID_HERE
+
+###
+
+GET http://localhost:3333/attendees/ATTENDEE_ID_HERE/badge
+
+###
+
+GET http://localhost:3333/attendees/ATTENDEE_ID_HERE/check-in
+
+###
+
+GET http://localhost:3333/events/EVENT_ID_HERE/attendees?query=ATTENDEE_NAME_HERE
